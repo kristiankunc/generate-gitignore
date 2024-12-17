@@ -1,0 +1,7 @@
+requests
+argparse
+requests
+json
+setuptools
+platformdirs
+colorama

@@ -1,0 +1,29 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="generate-readme",
+    version="0.1.0",
+    author="Kristián Kunc",
+    author_email="kristian@kristn.co.uk",
+    description="A CLI tool for generating .gitignore files",
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
+    url="https://github.com/kristiankunc/generate-gitignore",
+    packages=find_packages(),
+    python_requires=">=3.7",
+    install_requires=[
+        "requests",
+        "argparse",
+        "colorama",
+    ],
+    entry_points={
+        "console_scripts": [
+            "generate-readme=generate_readme.main:main",
+        ],
+    },
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+)
