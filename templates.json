@@ -160,6 +160,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Finale.gitignore"
     },
     {
+        "name": "firebase",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Firebase.gitignore"
+    },
+    {
         "name": "flaxengine",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/FlaxEngine.gitignore"
     },
