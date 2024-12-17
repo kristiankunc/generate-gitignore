@@ -20,11 +20,15 @@ def get_gitignore_files(repo_api_url: str, auth_token: str) -> List[File]:
     :param auth_token: The GitHub API token.
     :return: A list of File objects for all .gitignore files.
     """
+
     gitignore_files = []
+    headers = {}
+    if auth_token:
+        headers["Authorization"] = f"token {auth_token}"
 
     try:
         # Fetch the current directory's contents
-        response = requests.get(repo_api_url, headers={"Authorization": f"token {auth_token}"})
+        response = requests.get(repo_api_url, headers=headers)
         response.raise_for_status()
         files = response.json()
 
@@ -39,7 +43,6 @@ def get_gitignore_files(repo_api_url: str, auth_token: str) -> List[File]:
 
     except requests.exceptions.RequestException as e:
         print(f"Error fetching files from {repo_api_url}: {e}")
-
     return gitignore_files
 
 def parse_filename(filename: str):
@@ -67,9 +70,10 @@ if __name__ == "__main__":
     dotenv.load_dotenv()
     auth_token = os.getenv("GITHUB_TOKEN")
     
-    if not auth_token:
-        raise ValueError("GITHUB_TOKEN environment variable is not set")
-    
+    print(f"Fetching .gitignore files from {REPO_API_URL}...")
     gitignore_files = get_gitignore_files(REPO_API_URL, auth_token)
+    print(f"Found {len(gitignore_files)} .gitignore files.")
+    print("Dumping data to templates.json...")
     dump_file_data("./templates.json", gitignore_files)
+    print("Done.")
     
