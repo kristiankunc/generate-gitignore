@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="generate-gitignore",
-    version="0.1.0",
+    version="0.1.1",
     author="Kristián Kunc",
     author_email="kristian@kristn.co.uk",
     description="A CLI tool for generating .gitignore files",
