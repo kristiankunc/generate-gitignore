@@ -2,7 +2,7 @@
 
 A simple Python script to generate a .gitignore file for your project using the templates from [github.com/github/gitignore](https://github.com/github/gitignore)
 
-[![Build a Publish](https://github.com/kristiankunc/generate-gitignore/actions/workflows/build-and-publish.yml/badge.svg)](https://github.com/kristiankunc/generate-gitignore/actions/workflows/build-and-publish.yml)
+[![Build a Publish](https://github.com/kristiankunc/generate-gitignore/actions/workflows/build-and-publish.yml/badge.svg?event=release)](https://github.com/kristiankunc/generate-gitignore/actions/workflows/build-and-publish.yml)
 [![Update Templates](https://github.com/kristiankunc/generate-gitignore/actions/workflows/update-templates.yaml/badge.svg)](https://github.com/kristiankunc/generate-gitignore/actions/workflows/update-templates.yaml)
 
 ## Templates
@@ -15,6 +15,16 @@ I am not a maintainer of the gitignore source repository, so if you wish to have
 
 ## Usage
 
+### Installation
+
+Install the package using pip:
+
+```bash
+pip install generate-gitignore
+```
+
+### Running
+
 > [!WARNING]  
 > Applying a template will overwrite any existing .gitignore file in the current directory, you will be prompted to confirm before proceeding.
 
@@ -24,7 +34,7 @@ Once installed, you can run the script with the following command:
 generate-gitignore
 ```
 
-### Listing all available templates
+#### Listing all available templates
 
 You can list all available templates with the list command:
 
@@ -32,7 +42,7 @@ You can list all available templates with the list command:
 generate-gitignore list
 ```
 
-### Searching for a template
+#### Searching for a template
 
 You can search for a template with the search command, it will launch an interactive search in the terminal allowing you to search by name and apply the selected template:
 
@@ -40,7 +50,7 @@ You can search for a template with the search command, it will launch an interac
 generate-gitignore search
 ```
 
-### Generating a .gitignore file
+#### Generating a .gitignore file
 
 If you want to apply a template directly, you can use the apply command followed by the template name:
 
