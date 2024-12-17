@@ -1,7 +1,6 @@
 requests
 argparse
 requests
-json
 setuptools
 wheel
 platformdirs
