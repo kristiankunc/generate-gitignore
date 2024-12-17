@@ -1,13 +1,9 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import sys
-import os
-import json
+import tty, termios, sys, os, requests, argparse
 from difflib import get_close_matches
 from typing import Optional, List
-import requests
-import argparse
 from .cache import load_from_cache, save_to_cache
 from colorama import init, Fore, Style
 
@@ -18,7 +14,7 @@ def main():
     parser = construct_parser()
     args = parser.parse_args()
     
-    if args.list:
+    if args.command == "list":
         templates = load_templates()
         
         for template in templates:
@@ -26,25 +22,76 @@ def main():
 
         sys.exit(0)
 
-    if args.search:
+    if args.command == "search":
+        templates = load_templates()
+        template_names = [template["name"] for template in templates]
+        search_term = ""
+        cursor_pos = 0
+
+        def refresh_display():
+            os.system('cls' if os.name == 'nt' else 'clear')
+            print(f"{Fore.WHITE}Interactive search (press Enter to select, Ctrl+C to exit):")
+            
+            if not search_term:
+                print("\nAll templates:")
+                displayed = template_names[:10]
+            else:
+                matches = [name for name in template_names if search_term.lower() in name.lower()]
+                displayed = matches[:10]
+                
+            for name in displayed:
+                if cursor_pos == displayed.index(name):
+                    print(f"{Fore.GREEN}> {name}{Style.RESET_ALL}")
+                else:
+                    print(f"  {Fore.BLUE}{name}{Style.RESET_ALL}")
+                    
+            if len(displayed) > 10:
+                print(f"\n{Fore.YELLOW}...and {len(template_names) - 10} more{Style.RESET_ALL}")
+                
+            print(f"\nSearch: {search_term}", end="")
+
+        while True:
+            refresh_display()
+            
+            fd = sys.stdin.fileno()
+            old_settings = termios.tcgetattr(fd)
+            tty.setraw(sys.stdin.fileno())
+            ch = sys.stdin.read(1)
+            termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+
+            if ch == '\r':  # Enter key
+                matches = [name for name in template_names if search_term.lower() in name.lower()]
+                if matches:
+                    args.template = matches[cursor_pos]
+                    args.command = "use"
+                    break
+                else:
+                    print(f"\n{Fore.RED}No matches found{Style.RESET_ALL}")
+                    input("Press Enter to continue...")
+
+            elif ch in ('\x7f', '\x08'):  # Backspace
+                search_term = search_term[:-1]
+                cursor_pos = 0
+                
+            elif ch == '\x1b':  # Escape sequence
+                next_ch = sys.stdin.read(2)
+                if next_ch == '[A':  # Up arrow
+                    cursor_pos = max(0, cursor_pos - 1)
+                elif next_ch == '[B':  # Down arrow
+                    matches = [name for name in template_names if search_term.lower() in name.lower()]
+                    cursor_pos = min(len(matches[:10]) - 1, cursor_pos + 1)
+            elif ch.isprintable():
+                search_term += ch
+                cursor_pos = 0
+
+
+    if args.command == "use":
         templates = load_templates()
 
-        matches = find_closest_match(args.search, [template["name"] for template in templates])
-        if matches:
-            print(f"{Fore.WHITE}Found the following matches: {', '.join([f'{Fore.BLUE}' + match + f'{Style.RESET_ALL}' for match in matches])}{Style.RESET_ALL}")
-        else:
-            print(f"{Fore.RED}🗙 No match found{Style.RESET_ALL}")
-
-        sys.exit(0)
-
-    if args.use:
-        templates = load_templates()
-
-        template = next((template for template in templates if template["name"].lower() == args.use.lower()), None)
+        template = next((template for template in templates if template["name"].lower() == args.template.lower()), None)
         if template:
             print(f"{Fore.GREEN}Applying {template['name']}...{Style.RESET_ALL}")
 
-            # check if .gitignore already exists and is not empty
             if (os.path.exists(".gitignore") and os.path.getsize(".gitignore") > 0):
                 overwrite = get_bool_answer(f"{Fore.YELLOW}A .gitignore file already exists. Overwrite it?{Style.RESET_ALL}")
                 if not overwrite:
@@ -77,10 +124,6 @@ def fetch_templates(url: str) -> dict:
     :param url: The URL of the JSON file containing the template data.
     :return: A dictionary containing the template data.
     """
-
-    # DEV ONLY
-    with open("templates.json", "r") as f:
-        return json.load(f)
     
     response = requests.get(url)
 
@@ -115,9 +158,14 @@ def construct_parser() -> argparse.ArgumentParser:
     """
     parser = argparse.ArgumentParser(description="Generate .gitignore files for your projects")
 
-    parser.add_argument("--list", action="store_true", help="List available .gitignore templates")
-    parser.add_argument("--search", help="Search for a specific .gitignore template")
-    parser.add_argument("--use", help="Use a specific .gitignore template")
+    subparsers = parser.add_subparsers(dest='command')
+    
+    list_parser = subparsers.add_parser('list', help='List available .gitignore templates')
+    
+    search_parser = subparsers.add_parser('search', help='Search for a specific .gitignore template')
+    
+    use_parser = subparsers.add_parser('use', help='Use a specific .gitignore template')
+    use_parser.add_argument('template', help='Template name to use')
 
 
     return parser
@@ -137,18 +185,19 @@ def find_closest_match(query: str, candidates: List[str], cutoff: float = 0.6) -
 def get_bool_answer(prompt: str) -> bool:
     """
     Prompt the user for a yes/no answer and return the result as a boolean.
+    Pressing Enter defaults to yes.
 
     :param prompt: The prompt to display to the user.
-    :return: True if the user answers 'yes', False if the user answers 'no', and None if the input is invalid.
+    :return: True if the user answers 'yes' or presses Enter, False if the user answers 'no'.
     """
 
-    answer = input(f"{prompt} (yY/nN): ").lower()
-    if answer in ["y", "yes"]:
+    answer = input(f"{prompt} (Y/n): ").lower()
+    if answer in ["y", "yes", ""]: 
         return True
     elif answer in ["n", "no"]:
         return False
     else:
-        print(f"{Fore.RED}Invalid input. Please enter 'yes' or 'no'.{Style.RESET_ALL}")
+        print(f"{Fore.RED}Invalid input. Please enter 'y', 'n', or press Enter.{Style.RESET_ALL}")
         return get_bool_answer(prompt)
 
 def load_templates() -> dict:
@@ -165,4 +214,8 @@ def load_templates() -> dict:
     return templates
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        print(f"\n{Fore.RED}✘ Aborted.{Style.RESET_ALL}")
+        sys.exit(0)
