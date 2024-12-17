@@ -1,8 +1,5 @@
 requests
 argparse
-requests
-setuptools
-wheel
 platformdirs
 colorama
 python-dotenv
