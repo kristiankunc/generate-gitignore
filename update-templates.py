@@ -2,7 +2,6 @@ import json
 import os
 from typing import List
 import requests
-import dotenv
 from dataclasses import dataclass
 
 REPO_API_URL = "https://api.github.com/repos/github/gitignore/contents/"
