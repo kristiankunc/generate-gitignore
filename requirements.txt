@@ -5,4 +5,4 @@ setuptools
 wheel
 platformdirs
 colorama
-dotenv
+python-dotenv
