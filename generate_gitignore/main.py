@@ -8,7 +8,7 @@ from difflib import get_close_matches
 from typing import Optional, List
 import requests
 import argparse
-from generate_readme.cache import load_from_cache, save_to_cache
+from .cache import load_from_cache, save_to_cache
 from colorama import init, Fore, Style
 
 # Initialize colorama

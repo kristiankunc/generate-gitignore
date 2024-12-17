@@ -3,5 +3,6 @@ argparse
 requests
 json
 setuptools
+wheel
 platformdirs
 colorama

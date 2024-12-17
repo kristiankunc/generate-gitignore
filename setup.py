@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="generate-readme",
+    name="generate-gitignore",
     version="0.1.0",
     author="Kristián Kunc",
     author_email="kristian@kristn.co.uk",
@@ -18,9 +18,10 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "generate-readme=generate_readme.main:main",
+            "generate-gitignore=generate_gitignore.main:main",
         ],
     },
+
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
