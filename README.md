@@ -2,6 +2,8 @@
 
 A simple Python script to generate a .gitignore file for your project using the templates from [github.com/github/gitignore](https://github.com/github/gitignore)
 
+[![Build a Publish](https://github.com/kristiankunc/generate-gitignore/actions/workflows/build-and-publish.yml/badge.svg)](https://github.com/kristiankunc/generate-gitignore/actions/workflows/build-and-publish.yml)
+[![Update Templates](https://github.com/kristiankunc/generate-gitignore/actions/workflows/update-templates.yaml/badge.svg)](https://github.com/kristiankunc/generate-gitignore/actions/workflows/update-templates.yaml)
 
 ## Templates
 
