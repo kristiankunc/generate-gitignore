@@ -2,8 +2,13 @@
 
 A simple Python script to generate a .gitignore file for your project using the templates from [github.com/github/gitignore](https://github.com/github/gitignore)
 
+[![Pip install](https://img.shields.io/badge/pip_install-generate--gitignore-blue)](https://pypi.org/project/generate-gitignore/)
+[![PyPI - Version](https://img.shields.io/pypi/v/generate-gitignore)](https://pypi.org/project/generate-gitignore/#history)
+
+
 [![Build a Publish](https://github.com/kristiankunc/generate-gitignore/actions/workflows/build-and-publish.yml/badge.svg?event=release)](https://github.com/kristiankunc/generate-gitignore/actions/workflows/build-and-publish.yml)
-[![Update Templates](https://github.com/kristiankunc/generate-gitignore/actions/workflows/update-templates.yaml/badge.svg)](https://github.com/kristiankunc/generate-gitignore/actions/workflows/update-templates.yaml)
+[![Update Templates](https://github.com/kristiankunc/generate-gitignore/actions/workflows/update-templates.yaml/badge.svg?event=schedule)](https://github.com/kristiankunc/generate-gitignore/actions/workflows/update-templates.yaml)
+
 
 ## Templates
 
