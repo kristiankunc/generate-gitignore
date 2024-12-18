@@ -23,35 +23,65 @@ def main():
         sys.exit(0)
 
     if args.command == "search":
-        search_res = handle_search(templates)
-        args.template = search_res
+        # only pass the template names to the search function
+        template_id = handle_search("Search for a template", [t["name"] for t in templates])
+        args.template = [templates[template_id]["name"]]
         args.command = "use"
+        
+        confirm = get_bool_answer(f"\n{Fore.YELLOW}Apply template:{Style.RESET_ALL} {', '.join(args.template)}")
+        if not confirm:
+            print(f"{Fore.RED}✘ Aborting...{Style.RESET_ALL}")
+            sys.exit(0)
 
 
     if args.command == "use":
-        template = next((template for template in templates if template["name"].lower() == args.template.lower()), None)
-        if template:
-            print(f"{Fore.GREEN}Applying {template['name']}...{Style.RESET_ALL}")
+        print(f"{Fore.YELLOW}Applying template(s):{Style.RESET_ALL} {', '.join(args.template)}")
 
-            if (os.path.exists(".gitignore") and os.path.getsize(".gitignore") > 0):
-                overwrite = get_bool_answer(f"{Fore.YELLOW}A .gitignore file already exists. Overwrite it?{Style.RESET_ALL}")
-                if not overwrite:
-                    print(f"{Fore.RED}✘ Aborting...{Style.RESET_ALL}")
-                    sys.exit(0)
-            
-            with open(".gitignore", "w") as f:
+        gitignore_content = []
+        templates_found = []
+
+        for template_name in args.template:
+            template = next((t for t in templates if t["name"].lower() == template_name.lower()), None)
+            if template:
+                templates_found.append(template["name"])
+                
                 template_content = fetch_template(template["download_url"])
                 if template_content is None or template_content == "":
-                    print(f"{Fore.RED}✘ Error fetching template{Style.RESET_ALL}")
-                    sys.exit(1)
+                    print(f"{Fore.RED}✘ Error fetching template {template['name']}{Style.RESET_ALL}")
+                    continue
 
-                f.write(template_content)
+                gitignore_content.append(f"### {template['name'].upper()} ###")
+                gitignore_content.append("")
+                gitignore_content.append("")
+                gitignore_content.extend(template_content.splitlines())
+            else:
+                print(f"{Fore.RED}Template {Style.RESET_ALL}{template_name}{Fore.RED} not found{Style.RESET_ALL}")
+                sys.exit(1)
 
-            print(f"{Fore.GREEN}.gitignore file created successfully{Style.RESET_ALL}")
+        if not templates_found:
+            print(f"{Fore.RED}✘ No valid templates found{Style.RESET_ALL}")
+            sys.exit(1)
+
+        if os.path.exists(".gitignore") and os.path.getsize(".gitignore") > 0:
+            action = handle_search(f"{Fore.YELLOW}A .gitignore file already exists. Select how to handle it?{Style.RESET_ALL}",
+                                   ["Overwrite", "Append", "Abort"])
             
-        else:
-            print(f"{Fore.RED}Template '{args.use}' not found{Style.RESET_ALL}")
-        
+            print("\n")
+            if action == 0:
+                print(f"{Fore.YELLOW}Overwriting .gitignore file...{Style.RESET_ALL}")
+            
+            elif action == 1:
+                print(f"{Fore.YELLOW}Appending to .gitignore file...{Style.RESET_ALL}")
+                with open(".gitignore", "r") as f:
+                    gitignore_content = f.read().splitlines() + gitignore_content
+            elif action == 2:
+                print(f"{Fore.RED}✘ Aborting...{Style.RESET_ALL}")
+                sys.exit(0)
+
+        with open(".gitignore", "w") as f:
+            f.write(f"\n".join(gitignore_content))
+
+        print(f"{Fore.GREEN}✔ .gitignore file created updated with {len(templates_found)} template(s){Style.RESET_ALL}")
         sys.exit(0)
 
     parser.print_help()
@@ -105,8 +135,8 @@ def construct_parser() -> argparse.ArgumentParser:
     
     search_parser = subparsers.add_parser('search', help='Search for a specific .gitignore template')
     
-    use_parser = subparsers.add_parser('use', help='Use a specific .gitignore template')
-    use_parser.add_argument('template', help='Template name to use')
+    use_parser = subparsers.add_parser('use', help='Use specific .gitignore template(s)')
+    use_parser.add_argument('template', nargs='+', help='Template name(s) to use')
 
 
     return parser
@@ -158,5 +188,5 @@ if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-        print(f"\n{Fore.RED}✘ Aborted.{Style.RESET_ALL}")
+        print(f"\n{Fore.RED}✘ Aborting...{Style.RESET_ALL}")
         sys.exit(0)
