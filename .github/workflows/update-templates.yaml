@@ -33,4 +33,4 @@ jobs:
                   commit_message: "Update templates"
                   commit_options: "--no-verify"
                   commit_user_name: "GitHub Actions"
-                  commit_user_email: "kristian.kunc@gmail.com"
+                  commit_user_email: "noreply@github.com"
