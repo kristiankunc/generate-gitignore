@@ -15,6 +15,7 @@ setup(
         "requests",
         "argparse",
         "colorama",
+        "termios",
     ],
     entry_points={
         "console_scripts": [
