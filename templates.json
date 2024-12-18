@@ -584,6 +584,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/MetaProgrammingSystem.gitignore"
     },
     {
+        "name": "modelica",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Modelica.gitignore"
+    },
+    {
         "name": "nanoc",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Nanoc.gitignore"
     },
@@ -842,6 +846,10 @@
     {
         "name": "community-autoit",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/AutoIt.gitignore"
+    },
+    {
+        "name": "community-automationstudio",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/AutomationStudio.gitignore"
     },
     {
         "name": "community-b4x",
