@@ -25,9 +25,6 @@ pip install generate-gitignore
 
 ### Running
 
-> [!WARNING]  
-> Applying a template will overwrite any existing .gitignore file in the current directory, you will be prompted to confirm before proceeding.
-
 Once installed, you can run the script with the following command:
 
 ```bash
@@ -52,10 +49,10 @@ generate-gitignore search
 
 #### Generating a .gitignore file
 
-If you want to apply a template directly, you can use the apply command followed by the template name:
+If you want to use a template directly, you can use the use command followed by an array of template names:
 
 ```bash
-generate-gitignore apply python
+generate-gitignore use python visualstudiocode ...
 ```
 
 ## Contributing
