@@ -1,93 +1,34 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import tty, termios, sys, os, requests, argparse
+import sys, os, requests, argparse
 from difflib import get_close_matches
 from typing import Optional, List
 from .cache import load_from_cache, save_to_cache
+from .search import handle_search
 from colorama import init, Fore, Style
 
-# Initialize colorama
 init(autoreset=True)
 
 def main():
     parser = construct_parser()
     args = parser.parse_args()
     
-    if args.command == "list":
-        templates = load_templates()
-        
+    templates = load_templates()
+
+    if args.command == "list":        
         for template in templates:
             print(f"{Fore.WHITE}{template['name']}{Style.RESET_ALL}")
 
         sys.exit(0)
 
     if args.command == "search":
-        templates = load_templates()
-        template_names = [template["name"] for template in templates]
-        search_term = ""
-        cursor_pos = 0
-
-        def refresh_display():
-            os.system('cls' if os.name == 'nt' else 'clear')
-            print(f"{Fore.WHITE}Interactive search (press Enter to select, Ctrl+C to exit):")
-            
-            if not search_term:
-                print("\nAll templates:")
-                displayed = template_names[:10]
-            else:
-                matches = [name for name in template_names if search_term.lower() in name.lower()]
-                displayed = matches[:10]
-                
-            for name in displayed:
-                if cursor_pos == displayed.index(name):
-                    print(f"{Fore.GREEN}> {name}{Style.RESET_ALL}")
-                else:
-                    print(f"  {Fore.BLUE}{name}{Style.RESET_ALL}")
-                    
-            if len(displayed) > 10:
-                print(f"\n{Fore.YELLOW}...and {len(template_names) - 10} more{Style.RESET_ALL}")
-                
-            print(f"\nSearch: {search_term}", end="")
-
-        while True:
-            refresh_display()
-            
-            fd = sys.stdin.fileno()
-            old_settings = termios.tcgetattr(fd)
-            tty.setraw(sys.stdin.fileno())
-            ch = sys.stdin.read(1)
-            termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
-
-            if ch == '\r':  # Enter key
-                matches = [name for name in template_names if search_term.lower() in name.lower()]
-                if matches:
-                    args.template = matches[cursor_pos]
-                    args.command = "use"
-                    break
-                else:
-                    print(f"\n{Fore.RED}No matches found{Style.RESET_ALL}")
-                    input("Press Enter to continue...")
-
-            elif ch in ('\x7f', '\x08'):  # Backspace
-                search_term = search_term[:-1]
-                cursor_pos = 0
-                
-            elif ch == '\x1b':  # Escape sequence
-                next_ch = sys.stdin.read(2)
-                if next_ch == '[A':  # Up arrow
-                    cursor_pos = max(0, cursor_pos - 1)
-                elif next_ch == '[B':  # Down arrow
-                    matches = [name for name in template_names if search_term.lower() in name.lower()]
-                    cursor_pos = min(len(matches[:10]) - 1, cursor_pos + 1)
-            elif ch.isprintable():
-                search_term += ch
-                cursor_pos = 0
+        search_res = handle_search(templates)
+        args.template = search_res
+        args.command = "use"
 
 
     if args.command == "use":
-        templates = load_templates()
-
         template = next((template for template in templates if template["name"].lower() == args.template.lower()), None)
         if template:
             print(f"{Fore.GREEN}Applying {template['name']}...{Style.RESET_ALL}")
