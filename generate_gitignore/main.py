@@ -6,6 +6,7 @@ from difflib import get_close_matches
 from typing import Optional, List
 from .cache import load_from_cache, save_to_cache
 from .search import handle_search
+from .version import __version__
 from colorama import init, Fore, Style
 
 init(autoreset=True)
@@ -128,6 +129,8 @@ def construct_parser() -> argparse.ArgumentParser:
     :return: An argument parser with subcommands for each template.
     """
     parser = argparse.ArgumentParser(description="Generate .gitignore files for your projects")
+
+    parser.add_argument("--version", action="version", version="generate-gitignore: " + __version__)
 
     subparsers = parser.add_subparsers(dest='command')
     

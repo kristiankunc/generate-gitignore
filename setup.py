@@ -1,8 +1,9 @@
 from setuptools import setup, find_packages
+from generate_gitignore.version import __version__
 
 setup(
     name="generate-gitignore",
-    version="0.1.2",
+    version=__version__,
     author="Kristián Kunc",
     author_email="kristian@kristn.co.uk",
     description="A CLI tool for generating .gitignore files",
