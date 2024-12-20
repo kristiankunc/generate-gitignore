@@ -27,18 +27,14 @@ def get_gitignore_files(repo_api_url: str, auth_token: str) -> List[File]:
         headers["Authorization"] = f"token {auth_token}"
 
     try:
-        # Fetch the current directory's contents
         response = requests.get(repo_api_url, headers=headers)
         response.raise_for_status()
         files = response.json()
 
-        # Iterate through the contents
         for file in files:
             if file["type"] == "file" and file["name"].endswith(".gitignore"):
-                # Add .gitignore files to the list
                 gitignore_files.append(File(parse_filename(file["path"]), file["download_url"]))
             elif file["type"] == "dir":
-                # If it's a directory, recurse into it
                 gitignore_files.extend(get_gitignore_files(file["url"], auth_token))
 
     except requests.exceptions.RequestException as e:

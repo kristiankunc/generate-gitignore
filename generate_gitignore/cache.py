@@ -7,8 +7,6 @@ from datetime import datetime
 
 APP_NAME = "py-generate_readme"
 
-# the cache file includes a timestamp on the first line, followed by the data in JSON format
-
 def get_cache_file_path(filename: str) -> str:
     """
     Get the full path to a cache file for the application.
