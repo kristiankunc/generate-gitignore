@@ -26,6 +26,12 @@ Install the package using pip:
 pip install generate-gitignore
 ```
 
+For global installation, it is recommended to use [pipx](https://github.com/pypa/pipx) as to avoid breaking any system packages, especially on linux systems:
+
+```bash
+pipx install generate-gitignore
+```
+
 ### Running
 
 Once installed, you can run the script with the following command:
