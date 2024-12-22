@@ -3,3 +3,4 @@ argparse
 platformdirs
 colorama
 python-dotenv
+platformdirs

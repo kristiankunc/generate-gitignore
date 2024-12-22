@@ -16,6 +16,7 @@ setup(
         "requests",
         "argparse",
         "colorama",
+        "platformdirs",
     ],
     entry_points={
         "console_scripts": [
