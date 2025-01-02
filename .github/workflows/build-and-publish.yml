@@ -47,6 +47,14 @@ jobs:
                   git commit -m "Update version.py to $VERSION"
                   git push origin ${{ github.ref_name }}
 
+            - name: Ensure version update on main branch
+              run: |
+                  git fetch origin main
+                  git checkout main
+                  git pull origin main
+                  git merge ${{ github.ref_name }} --no-ff -m "Merge release branch to main with version update"
+                  git push origin main
+
             - name: Build the package
               run: python -m build
 
