@@ -17,6 +17,14 @@ def main():
     
     templates = load_templates()
 
+    if not os.path.exists(".git"):
+        initialize_git = get_bool_answer(f"{Fore.YELLOW}This directory is not a git repository. Run {Fore.WHITE}git init{Fore.YELLOW} now?{Style.RESET_ALL}")
+        if initialize_git:
+            os.system("git init")
+        else:
+            print(f"{Fore.RED}✘ Aborting...{Style.RESET_ALL}")
+            sys.exit(0)
+
     if args.command == "list":        
         for template in templates:
             print(f"{Fore.WHITE}{template['name']}{Style.RESET_ALL}")
@@ -24,7 +32,6 @@ def main():
         sys.exit(0)
 
     if args.command == "search":
-        # only pass the template names to the search function
         template_id = handle_search("Search for a template", [t["name"] for t in templates])
         args.template = [templates[template_id]["name"]]
         args.command = "use"
