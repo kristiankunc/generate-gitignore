@@ -30,10 +30,11 @@ jobs:
 
             - name: Grab version from GH tag
               id: get_version
-              run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+              run: echo "VERSION=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
 
             - name: Set version in package
-              run: echo "__version__ = \"$VERSION\"" > generate-gitignore/version.py
+              run: |
+                  echo "__version__ = \"$VERSION\"" > generate_gitignore/version.py
 
             - name: Commit changes
               uses: stefanzweifel/git-auto-commit-action@v5
