@@ -28,6 +28,24 @@ jobs:
             - name: Install build dependencies
               run: pip install -r build-requirements.txt
 
+            - name: Grab version from GH tag
+              id: get_version
+              run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+
+            - name: Set version in package
+              run: echo "__version__ = \"$VERSION\"" > generate-gitignore/version.py
+
+            - name: Commit changes
+              uses: stefanzweifel/git-auto-commit-action@v5
+              with:
+                  commit_message: "Bump version to ${{ steps.get_version.outputs.VERSION }}"
+                  commit_options: "--no-verify"
+                  commit_user_name: "GitHub Actions"
+                  commit_user_email: "noreply@github.com"
+
+            - name: Update release tag
+              run: git tag -f ${{ steps.get_version.outputs.VERSION }}
+
             - name: Run build script
               run: python -m build
 
