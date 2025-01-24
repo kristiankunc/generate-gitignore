@@ -168,6 +168,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/FlaxEngine.gitignore"
     },
     {
+        "name": "flutter",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Flutter.gitignore"
+    },
+    {
         "name": "forcedotcom",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/ForceDotCom.gitignore"
     },
