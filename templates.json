@@ -960,6 +960,18 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Nix.gitignore"
     },
     {
+        "name": "community-obsidian-notesandcoreconfiguration",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Obsidian/NotesAndCoreConfiguration.gitignore"
+    },
+    {
+        "name": "community-obsidian-notesandextendedconfiguration",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Obsidian/NotesAndExtendedConfiguration.gitignore"
+    },
+    {
+        "name": "community-obsidian-notesonly",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Obsidian/NotesOnly.gitignore"
+    },
+    {
         "name": "community-openssl",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/OpenSSL.gitignore"
     },
