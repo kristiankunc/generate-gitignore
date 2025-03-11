@@ -112,6 +112,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Delphi.gitignore"
     },
     {
+        "name": "dotnet",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Dotnet.gitignore"
+    },
+    {
         "name": "drupal",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Drupal.gitignore"
     },
