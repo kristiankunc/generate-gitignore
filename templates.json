@@ -576,6 +576,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Lua.gitignore"
     },
     {
+        "name": "luau",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Luau.gitignore"
+    },
+    {
         "name": "magento",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Magento.gitignore"
     },
