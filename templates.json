@@ -120,10 +120,6 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Drupal.gitignore"
     },
     {
-        "name": "ecu-test",
-        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/ECU-TEST.gitignore"
-    },
-    {
         "name": "episerver",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/EPiServer.gitignore"
     },
@@ -1090,5 +1086,9 @@
     {
         "name": "community-embedded-uvision",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/embedded/uVision.gitignore"
+    },
+    {
+        "name": "ecu.test",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/ecu.test.gitignore"
     }
 ]
