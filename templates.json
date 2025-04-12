@@ -772,6 +772,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Terraform.gitignore"
     },
     {
+        "name": "testcomplete",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/TestComplete.gitignore"
+    },
+    {
         "name": "textpattern",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Textpattern.gitignore"
     },
