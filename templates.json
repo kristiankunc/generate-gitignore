@@ -744,6 +744,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Smalltalk.gitignore"
     },
     {
+        "name": "solidity-remix",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Solidity-Remix.gitignore"
+    },
+    {
         "name": "stella",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Stella.gitignore"
     },
@@ -890,6 +894,10 @@
     {
         "name": "community-dotnet-core",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/DotNet/core.gitignore"
+    },
+    {
+        "name": "community-dotter",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Dotter.gitignore"
     },
     {
         "name": "community-elixir-phoenix",
