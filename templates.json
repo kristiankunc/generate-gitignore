@@ -244,6 +244,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/CodeKit.gitignore"
     },
     {
+        "name": "global-cursor",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/Cursor.gitignore"
+    },
+    {
         "name": "global-darteditor",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/DartEditor.gitignore"
     },
