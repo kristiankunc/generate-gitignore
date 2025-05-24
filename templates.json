@@ -12,6 +12,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Ada.gitignore"
     },
     {
+        "name": "adventuregamestudio",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/AdventureGameStudio.gitignore"
+    },
+    {
         "name": "agda",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Agda.gitignore"
     },
@@ -198,6 +202,10 @@
     {
         "name": "githubpages",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/GitHubPages.gitignore"
+    },
+    {
+        "name": "gleam",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Gleam.gitignore"
     },
     {
         "name": "global-al",
@@ -388,6 +396,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/Patch.gitignore"
     },
     {
+        "name": "global-platformio",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/PlatformIO.gitignore"
+    },
+    {
         "name": "global-putty",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/PuTTY.gitignore"
     },
@@ -552,6 +564,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/LabVIEW.gitignore"
     },
     {
+        "name": "langchain",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/LangChain.gitignore"
+    },
+    {
         "name": "laravel",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Laravel.gitignore"
     },
@@ -604,8 +620,16 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Nanoc.gitignore"
     },
     {
+        "name": "nextjs",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Nextjs.gitignore"
+    },
+    {
         "name": "nim",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Nim.gitignore"
+    },
+    {
+        "name": "nix",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Nix.gitignore"
     },
     {
         "name": "node",
@@ -976,10 +1000,6 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/NasaSpecsIntact.gitignore"
     },
     {
-        "name": "community-nix",
-        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Nix.gitignore"
-    },
-    {
         "name": "community-obsidian-notesandcoreconfiguration",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Obsidian/NotesAndCoreConfiguration.gitignore"
     },
@@ -1102,6 +1122,10 @@
     {
         "name": "community-embedded-uvision",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/embedded/uVision.gitignore"
+    },
+    {
+        "name": "community-libogc",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/libogc.gitignore"
     },
     {
         "name": "ecu.test",
