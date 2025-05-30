@@ -512,6 +512,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Haskell.gitignore"
     },
     {
+        "name": "haxe",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Haxe.gitignore"
+    },
+    {
         "name": "iar",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/IAR.gitignore"
     },
