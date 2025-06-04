@@ -1100,6 +1100,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Toit.gitignore"
     },
     {
+        "name": "community-utau",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/UTAU.gitignore"
+    },
+    {
         "name": "community-uipath",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/UiPath.gitignore"
     },
