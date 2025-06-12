@@ -844,6 +844,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/UnrealEngine.gitignore"
     },
     {
+        "name": "vba",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/VBA.gitignore"
+    },
+    {
         "name": "vvvv",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/VVVV.gitignore"
     },
