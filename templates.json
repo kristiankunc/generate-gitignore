@@ -632,6 +632,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Nanoc.gitignore"
     },
     {
+        "name": "nestjs",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Nestjs.gitignore"
+    },
+    {
         "name": "nextjs",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Nextjs.gitignore"
     },
@@ -982,6 +986,10 @@
     {
         "name": "community-javascript-cordova",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/JavaScript/Cordova.gitignore"
+    },
+    {
+        "name": "community-javascript-expo",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/JavaScript/Expo.gitignore"
     },
     {
         "name": "community-javascript-meteor",
