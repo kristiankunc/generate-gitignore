@@ -496,6 +496,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/macOS.gitignore"
     },
     {
+        "name": "global-mise",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/mise.gitignore"
+    },
+    {
         "name": "go",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Go.gitignore"
     },
@@ -510,6 +514,10 @@
     {
         "name": "grails",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Grails.gitignore"
+    },
+    {
+        "name": "hip",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/HIP.gitignore"
     },
     {
         "name": "haskell",
@@ -754,6 +762,10 @@
     {
         "name": "scons",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/SCons.gitignore"
+    },
+    {
+        "name": "ssdt-sqlproj",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/SSDT-sqlproj.gitignore"
     },
     {
         "name": "sass",
