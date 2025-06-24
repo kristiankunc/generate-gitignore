@@ -332,6 +332,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/Lazarus.gitignore"
     },
     {
+        "name": "global-lefthook",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/Lefthook.gitignore"
+    },
+    {
         "name": "global-libreoffice",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/LibreOffice.gitignore"
     },
