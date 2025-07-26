@@ -1032,6 +1032,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Logtalk.gitignore"
     },
     {
+        "name": "community-metatrader5",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/MetaTrader5.gitignore"
+    },
+    {
         "name": "community-move",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Move.gitignore"
     },
