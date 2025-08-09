@@ -944,6 +944,14 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Beef.gitignore"
     },
     {
+        "name": "community-boxlang-coldbox",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/BoxLang/ColdBox.gitignore"
+    },
+    {
+        "name": "community-cfml-coldbox",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/CFML/ColdBox.gitignore"
+    },
+    {
         "name": "community-dotnet-inforcms",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/DotNet/InforCMS.gitignore"
     },
