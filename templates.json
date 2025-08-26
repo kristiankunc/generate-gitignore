@@ -364,10 +364,6 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/MicrosoftOffice.gitignore"
     },
     {
-        "name": "global-modelsim",
-        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/ModelSim.gitignore"
-    },
-    {
         "name": "global-momentics",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/Momentics.gitignore"
     },
@@ -634,6 +630,10 @@
     {
         "name": "metaprogrammingsystem",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/MetaProgrammingSystem.gitignore"
+    },
+    {
+        "name": "modelsim",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/ModelSim.gitignore"
     },
     {
         "name": "modelica",
