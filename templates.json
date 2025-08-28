@@ -772,6 +772,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/SSDT-sqlproj.gitignore"
     },
     {
+        "name": "salesforce",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Salesforce.gitignore"
+    },
+    {
         "name": "sass",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Sass.gitignore"
     },
