@@ -1004,8 +1004,40 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Hexo.gitignore"
     },
     {
+        "name": "community-java-jboss4",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Java/JBoss4.gitignore"
+    },
+    {
+        "name": "community-java-jboss6",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Java/JBoss6.gitignore"
+    },
+    {
+        "name": "community-javascript-cordova",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/JavaScript/Cordova.gitignore"
+    },
+    {
+        "name": "community-javascript-expo",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/JavaScript/Expo.gitignore"
+    },
+    {
+        "name": "community-javascript-meteor",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/JavaScript/Meteor.gitignore"
+    },
+    {
+        "name": "community-javascript-nwjs",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/JavaScript/NWjs.gitignore"
+    },
+    {
+        "name": "community-javascript-vue",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/JavaScript/Vue.gitignore"
+    },
+    {
         "name": "community-lensstudio",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/LensStudio.gitignore"
+    },
+    {
+        "name": "community-linux-snap",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Linux/Snap.gitignore"
     },
     {
         "name": "community-logtalk",
@@ -1024,6 +1056,18 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/NasaSpecsIntact.gitignore"
     },
     {
+        "name": "community-obsidian-notesandcoreconfiguration",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Obsidian/NotesAndCoreConfiguration.gitignore"
+    },
+    {
+        "name": "community-obsidian-notesandextendedconfiguration",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Obsidian/NotesAndExtendedConfiguration.gitignore"
+    },
+    {
+        "name": "community-obsidian-notesonly",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Obsidian/NotesOnly.gitignore"
+    },
+    {
         "name": "community-openssl",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/OpenSSL.gitignore"
     },
@@ -1032,8 +1076,48 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/OpenTofu.gitignore"
     },
     {
+        "name": "community-php-bitrix",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/PHP/Bitrix.gitignore"
+    },
+    {
+        "name": "community-php-codesniffer",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/PHP/CodeSniffer.gitignore"
+    },
+    {
+        "name": "community-php-drupal7",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/PHP/Drupal7.gitignore"
+    },
+    {
+        "name": "community-php-jigsaw",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/PHP/Jigsaw.gitignore"
+    },
+    {
+        "name": "community-php-magento1",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/PHP/Magento1.gitignore"
+    },
+    {
+        "name": "community-php-magento2",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/PHP/Magento2.gitignore"
+    },
+    {
+        "name": "community-php-pimcore",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/PHP/Pimcore.gitignore"
+    },
+    {
+        "name": "community-php-thinkphp",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/PHP/ThinkPHP.gitignore"
+    },
+    {
         "name": "community-puppet",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Puppet.gitignore"
+    },
+    {
+        "name": "community-python-jupyternotebooks",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Python/JupyterNotebooks.gitignore"
+    },
+    {
+        "name": "community-python-nikola",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Python/Nikola.gitignore"
     },
     {
         "name": "community-ros2",
@@ -1082,6 +1166,22 @@
     {
         "name": "community-xilinx",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Xilinx.gitignore"
+    },
+    {
+        "name": "community-embedded-atmelstudio",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/embedded/AtmelStudio.gitignore"
+    },
+    {
+        "name": "community-embedded-iar_ewarm",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/embedded/IAR_EWARM.gitignore"
+    },
+    {
+        "name": "community-embedded-esp-idf",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/embedded/esp-idf.gitignore"
+    },
+    {
+        "name": "community-embedded-uvision",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/embedded/uVision.gitignore"
     },
     {
         "name": "community-libogc",
