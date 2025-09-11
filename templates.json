@@ -420,6 +420,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/SBT.gitignore"
     },
     {
+        "name": "global-stm32cubeide",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/STM32CubeIDE.gitignore"
+    },
+    {
         "name": "global-svn",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/SVN.gitignore"
     },
