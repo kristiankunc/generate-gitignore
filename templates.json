@@ -1116,6 +1116,14 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Puppet.gitignore"
     },
     {
+        "name": "community-python-jupyternotebooks",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Python/JupyterNotebooks.gitignore"
+    },
+    {
+        "name": "community-python-nikola",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Python/Nikola.gitignore"
+    },
+    {
         "name": "community-ros2",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/ROS2.gitignore"
     },
@@ -1162,6 +1170,22 @@
     {
         "name": "community-xilinx",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Xilinx.gitignore"
+    },
+    {
+        "name": "community-embedded-atmelstudio",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/embedded/AtmelStudio.gitignore"
+    },
+    {
+        "name": "community-embedded-iar_ewarm",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/embedded/IAR_EWARM.gitignore"
+    },
+    {
+        "name": "community-embedded-esp-idf",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/embedded/esp-idf.gitignore"
+    },
+    {
+        "name": "community-embedded-uvision",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/embedded/uVision.gitignore"
     },
     {
         "name": "community-libogc",
