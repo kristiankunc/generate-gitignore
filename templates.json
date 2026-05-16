@@ -120,6 +120,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Delphi.gitignore"
     },
     {
+        "name": "deno",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Deno.gitignore"
+    },
+    {
         "name": "dotnet",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Dotnet.gitignore"
     },
@@ -214,6 +218,10 @@
     {
         "name": "global-al",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/AL.gitignore"
+    },
+    {
+        "name": "global-agents",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/Agents.gitignore"
     },
     {
         "name": "global-anjuta",
@@ -388,6 +396,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/Octave.gitignore"
     },
     {
+        "name": "global-ohmyopenagent",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/OhMyOpenAgent.gitignore"
+    },
+    {
         "name": "global-otto",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/Otto.gitignore"
     },
@@ -496,6 +508,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/XilinxISE.gitignore"
     },
     {
+        "name": "global-zed",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/Zed.gitignore"
+    },
+    {
         "name": "global-macos",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Global/macOS.gitignore"
     },
@@ -596,6 +612,14 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Laravel.gitignore"
     },
     {
+        "name": "lasal",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Lasal.gitignore"
+    },
+    {
+        "name": "lean",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Lean.gitignore"
+    },
+    {
         "name": "leiningen",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Leiningen.gitignore"
     },
@@ -642,6 +666,10 @@
     {
         "name": "modelica",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Modelica.gitignore"
+    },
+    {
+        "name": "moonbit",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/MoonBit.gitignore"
     },
     {
         "name": "nanoc",
@@ -812,6 +840,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Smalltalk.gitignore"
     },
     {
+        "name": "solidworks",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/SolidWorks.gitignore"
+    },
+    {
         "name": "solidity-remix",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Solidity-Remix.gitignore"
     },
@@ -916,6 +948,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/Zig.gitignore"
     },
     {
+        "name": "bun",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/bun.gitignore"
+    },
+    {
         "name": "community-aws-cdk",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/AWS/CDK.gitignore"
     },
@@ -1002,6 +1038,10 @@
     {
         "name": "community-gretl",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Gretl.gitignore"
+    },
+    {
+        "name": "community-hol",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/HOL.gitignore"
     },
     {
         "name": "community-hexo",
@@ -1148,6 +1188,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Strapi.gitignore"
     },
     {
+        "name": "community-tauri",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Tauri.gitignore"
+    },
+    {
         "name": "community-terragrunt",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Terragrunt.gitignore"
     },
@@ -1178,6 +1222,10 @@
     {
         "name": "community-embedded-iar_ewarm",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/embedded/IAR_EWARM.gitignore"
+    },
+    {
+        "name": "community-embedded-microchip_mplab_x_ide",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/embedded/Microchip_MPLAB_X_IDE.gitignore"
     },
     {
         "name": "community-embedded-esp-idf",
