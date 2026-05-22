@@ -1024,6 +1024,10 @@
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/Exercism.gitignore"
     },
     {
+        "name": "community-freecad",
+        "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/FreeCAD.gitignore"
+    },
+    {
         "name": "community-gnome-gnomeshellextension",
         "download_url": "https://raw.githubusercontent.com/github/gitignore/main/community/GNOME/GNOMEShellExtension.gitignore"
     },
